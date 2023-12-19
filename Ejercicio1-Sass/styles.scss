@@ -1,0 +1,56 @@
+$global-color: blue;
+$global-font-size: 16px;
+
+@mixin button-style($color) {
+  background-color: $color;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: $global-font-size;
+  cursor: pointer;
+
+  &:hover {
+    background-color: darken($color, 10%);
+  }
+}
+
+%button-shared {
+  display: inline-block;
+  margin: 5px;
+  text-align: center;
+}
+
+$color-map: (
+  "primary": green,
+  "secondary": red,
+  "tertiary": yellow,
+);
+
+@function get-button-color($key) {
+  @return map-get($color-map, $key);
+}
+
+$sizes: 12px, 14px, 16px;
+
+.btn {
+  @extend %button-shared;
+
+  &-primary {
+    @include button-style(get-button-color("primary"));
+  }
+
+  &-secondary {
+    @include button-style(get-button-color("secondary"));
+  }
+
+  &-tertiary {
+    @include button-style(get-button-color("tertiary"));
+    font-size: nth($sizes, 3);
+  }
+}
+
+@each $size in $sizes {
+  .text-#{index($sizes, $size)} {
+    font-size: $size;
+  }
+}

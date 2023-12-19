@@ -1,0 +1,92 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+footer {
+  background-color: lightgreen;
+  padding: 20px;
+}
+@media (max-width: 800px) {
+  footer {
+    background-color: orange;
+  }
+}
+@media (max-width: 100px) {
+  footer {
+    background-color: red;
+  }
+}
+@media (max-width: 1000px) {
+  footer {
+    font-size: 18px;
+  }
+}
+@media (max-width: 800px) {
+  footer {
+    font-size: 16px;
+  }
+}
+@media (max-width: 100px) {
+  footer {
+    font-size: 14px;
+  }
+}
+
+h1 {
+  color: #1a1a1a;
+}
+
+h1 + button, h1 + button {
+  margin-top: 10px;
+}
+
+h2 {
+  color: black;
+}
+
+h2 + button, h2 + button {
+  margin-top: 10px;
+}
+
+h3 {
+  color: black;
+}
+
+h3 + button, h3 + button {
+  margin-top: 10px;
+}
+
+h4 {
+  color: black;
+}
+
+h4 + button, h4 + button {
+  margin-top: 10px;
+}
+
+h5 {
+  color: black;
+}
+
+h5 + button, h5 + button {
+  margin-top: 10px;
+}
+
+h6 {
+  color: black;
+}
+
+h6 + button, h6 + button {
+  margin-top: 10px;
+}
+
+button {
+  background-color: #3498db;
+  color: #fff;
+  padding: 8px 12px;
+  border: none;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #2980b9;
+}/*# sourceMappingURL=style.css.map */

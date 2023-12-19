@@ -1,0 +1,71 @@
+// Definición de variables para colores de footer
+$color-footer-desktop: lightgreen !default
+$color-footer-tablet: orange !default
+$color-footer-mobile: red !default
+
+// Definición de variables para tamaños de pantalla
+$desktop: 1000px
+$tablet: 800px
+$mobile: 100px
+
+// Mixin para aplicar estilos según el dispositivo
+= device-footer-colors
+  background-color: $color-footer-desktop // Valor por defecto
+
+  @media (max-width: $tablet)
+    background-color: $color-footer-tablet
+
+  @media (max-width: $mobile)
+    background-color: $color-footer-mobile
+
+// Mixin para estilos de encabezados y botones
+= header-styles
+  $header-color: #333 // Color base del texto
+  $header-increment: 10 // Incremento en cada iteración
+
+  // Bucle @for para oscurecer y aclarar los encabezados
+  @for $i from 1 through 6
+    h#{$i}
+      color: darken($header-color, $i * $header-increment);
+
+    // Añade botones entre los encabezados
+    h#{$i}
+      + button, + button
+        margin-top: 10px
+
+// Estilos generales
+body
+  font-family: Arial, sans-serif
+  margin: 0 0 120px // Ajusta el margen inferior para dar espacio al footer
+
+// Estilos del footer
+footer
+  +device-footer-colors
+  padding: 20px
+  position: fixed
+  bottom: 0
+  width: 100%
+
+  // Estilos adicionales según el dispositivo
+  @media (max-width: $desktop)
+    font-size: 18px
+
+  @media (max-width: $tablet)
+    font-size: 16px
+
+  @media (max-width: $mobile)
+    font-size: 14px
+
+// Estilos de encabezados y botones
+@include header-styles
+
+// Estilos específicos de los botones
+button
+  background-color: #3498db
+  color: #fff
+  padding: 8px 12px
+  border: none
+  cursor: pointer
+
+  &:hover
+    background-color: #2980b9

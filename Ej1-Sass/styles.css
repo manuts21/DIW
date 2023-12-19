@@ -1,0 +1,52 @@
+.btn {
+  display: inline-block;
+  margin: 5px;
+  text-align: center;
+}
+
+.btn-primary {
+  background-color: green;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.btn-primary:hover {
+  background-color: #004d00;
+}
+.btn-secondary {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.btn-secondary:hover {
+  background-color: #cc0000;
+}
+.btn-tertiary {
+  background-color: yellow;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  font-size: 3px;
+}
+.btn-tertiary:hover {
+  background-color: #cccc00;
+}
+
+.text-1 {
+  font-size: 12px;
+}
+
+.text-2 {
+  font-size: 14px;
+}
+
+.text-3 {
+  font-size: 16px;
+}/*# sourceMappingURL=styles.css.map */

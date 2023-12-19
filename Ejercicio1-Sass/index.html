@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Botones SASS</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <button class="btn btn-primary">Botón Calc</button>
+      <button class="btn btn-secondary">Botón listas</button>
+      <button class="btn btn-tertiary">Botón Mapa</button>
+
+      <div class="text-sizes">
+        <p class="text-1" id="1"></p>
+        <p class="text-2" id="2"></p>
+        <p class="text-3" id="3"></p>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        document
+          .querySelector(".btn-primary")
+          .addEventListener("click", function () {
+            var a = "Resultado de calcExample(5, 10): " + calcExample(5, 10);
+            document.getElementById("1").innerHTML = a;
+          });
+
+        document
+          .querySelector(".btn-secondary")
+          .addEventListener("click", function () {
+            const sizes = [12, 14, 16];
+            var a =
+              "Operaciones con la lista: Longitud - " +
+              sizes.length +
+              ", Elemento en índice 1 - " +
+              sizes[1];
+            document.getElementById("2").innerHTML = a;
+          });
+
+        document
+          .querySelector(".btn-tertiary")
+          .addEventListener("click", function () {
+            const colorMap = {
+              primary: "green",
+              secondary: "red",
+              tertiary: "yellow",
+            };
+            var e = "Color primario del mapa: " + colorMap.primary;
+            document.getElementById("3").innerHTML = e;
+          });
+      });
+
+      function calcExample(a, b) {
+        return a + b;
+      }
+    </script>
+  </body>
+</html>
